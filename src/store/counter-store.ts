@@ -1,9 +1,23 @@
 import { createStore } from "zustand/vanilla";
-import { TICKETS_MOCKUP, TTicket } from "@consts/tickets";
+import { TICKETS_MOCKUP } from "@consts/tickets";
 import {
     filterTicketsByStops,
     sortTicketsByPrice,
 } from "@helpers/arrayHelpers";
+
+export type TTicket = {
+    origin: string;
+    origin_name: string;
+    destination: string;
+    destination_name: string;
+    departure_date: string;
+    departure_time: string;
+    arrival_date: string;
+    arrival_time: string;
+    carrier: string;
+    stops: number;
+    price: number;
+};
 
 export enum ECurrencies {
     USD = "USD",
