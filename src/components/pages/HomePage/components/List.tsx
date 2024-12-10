@@ -1,19 +1,16 @@
 "use client";
 
-import { FC, useEffect } from "react";
-import { TTicket } from "@consts/tickets";
+import { FC } from "react";
 import { Button } from "antd";
 import dayjs from "dayjs";
+
 import { getNounFromNumber } from "@helpers/getNounFromNumber";
 import { useCounterStore } from "@components/Provider";
 import { DAY_FORMAT, DAY_INITIAL_FORMAT } from "@consts/formats";
+import { TTicket } from "@store/counter-store";
 
 const List = () => {
     const { ticketsList } = useCounterStore((state) => state);
-
-    useEffect(() => {
-        console.log("ticketsList", ticketsList);
-    }, []);
 
     return (
         <div className={"home_list__wrapper"}>
@@ -56,9 +53,9 @@ const Ticket: FC<TTicket> = ({
                 <TicketPlace
                     code={origin}
                     name={origin_name}
-                    isOrigin={true}
                     date={departure_date}
                     time={departure_time}
+                    isOrigin={true}
                 />
                 <span className={"ticket_transfer-info"}>
                     {stops}{" "}
