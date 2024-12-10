@@ -1,0 +1,102 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "react": [
+        "./node_modules/@types/react"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@components": [
+        "src/components/index"
+      ],
+      "@consts/*": [
+        "src/consts/*"
+      ],
+      "@consts": [
+        "src/consts/index"
+      ],
+      "@globalTypes/*": [
+        "src/globalTypes/*"
+      ],
+      "@globalTypes": [
+        "src/globalTypes/index"
+      ],
+      "@public/*": [
+        "public/*"
+      ],
+      "@public": [
+        "public/index"
+      ],
+      "@helpers/*": [
+        "src/helpers/*"
+      ],
+      "@helpers": [
+        "src/helpers/index"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@assets": [
+        "src/assets/index"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@store": [
+        "src/store/index"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
+      "@utils": [
+        "src/utils/index"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
+      ],
+      "@hooks": [
+        "src/hooks/index"
+      ],
+      "@api/*": [
+        "src/api-main/*"
+      ],
+      "@api": [
+        "src/api-main/index"
+      ]
+    },
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,138 @@
+// Base
+@import 'base/normalize';
+@import 'base/animations';
+
+$white: #fff;
+$layoutColor: #f3f7fa;
+$primaryColor: #fe6d02;
+$secondaryColor: #2196f3;
+$space: 4px;
+$box-shadow-bs: 2px 2px 12px rgba(89, 63, 45, 0.12);
+
+@function space($value){
+  @return calc(#{$space} * #{$value});
+}
+
+body{
+  font-family: var(--font-sans), Arial , sans-serif;
+  line-height: 1.02;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.layout_wrapper{
+  background: $layoutColor;
+  min-height: 100vh;
+  padding: 5vh 0;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home{
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: space(6);
+    padding: space(6);
+  }
+
+  &_logo{
+    &__wrapper{
+      display: flex;
+      justify-content: center;
+      margin: space(8);
+    }
+  }
+
+  &_sidebar{
+    &__inner-wrapper{
+      background: $white;
+      padding: space(4);
+      box-shadow: $box-shadow-bs;
+      border-radius: space(3);
+    }
+  }
+
+  &_list{
+    &__inner-wrapper{
+      display: flex;
+      flex-direction: column;
+      gap: space(6);
+    }
+  }
+}
+
+.ticket{
+  &_wrapper{
+    background: $white;
+    box-shadow: $box-shadow-bs;
+    border-radius: space(3);
+    display: flex;
+  }
+  &_actions{
+    width: 30%;
+    min-width: 200px;
+    flex: 0 0 auto;
+    border-right: 1px solid lightgray;
+    padding: space(6);
+    display: flex;
+    flex-direction: column;
+    gap: space(4);
+    .ant-btn{
+      font-size: 24px;
+      height: auto;
+      flex-direction: column;
+      background: $primaryColor;
+      color: $white;
+      border: 0 !important;
+      line-height: 1.1 !important;
+      padding: space(3) space(1);
+      &:hover{
+        background: rgba($primaryColor, .8) !important;
+        color: $white !important;
+      }
+    }
+  }
+  &_main-info{
+    padding: space(6);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &_place{
+    h4{
+      font-size: 36px;
+      margin-bottom: space(2);
+      font-weight: 400;
+    }
+    h5{
+      margin-bottom: space(3);
+    }
+    p{
+
+    }
+  }
+}
+
+.filed_group{
+  h4{
+    margin-bottom: space(2);
+  }
+
+  &._checkbox{
+    display: flex;
+    flex-direction: column;
+  }
+  .ant-checkbox-wrapper{
+    margin-bottom: space(2);
+  }
+  .ant-checkbox-group{
+    flex-direction: column;
+  }
+}

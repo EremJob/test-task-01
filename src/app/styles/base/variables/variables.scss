@@ -1,0 +1,110 @@
+@import "variable-color-palette";
+@import "variables-media";
+
+$space: 4px;
+$transition: .2s;
+$image-proportion: 1.33;
+
+/** -------------------------------------------------------------------------------- */
+// Project Colors
+$color-primary: $Primary_500;
+$color-primary-hover: $Primary_300;
+
+$color-secondary: $Secondary_500;
+$color-secondary-hover: $Secondary_300;
+
+$color-success: $Green_700;
+$color-success-hover: $Green_500;
+
+$color-danger: $Red-500;
+$color-danger-hover: $Red-300;
+
+$color-dark: $Secondary_900;
+$color-dark-hover: $Secondary_800;
+
+$color-default-link: #1890ff;
+
+$layout-bg-color: #e8ebe9;
+$light-section-bg-color: rgba($White, .7);
+
+
+/** -------------------------------------------------------------------------------- */
+// Fonts
+$font-family-brand: var(--font-caldina);
+$font-family-primary: var(--font-nunito);
+
+// /** -------------------------------------------------------------------------------- */
+// Font-size
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-bs: 1rem;
+$font-size-md: 1.125rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-xxl: 2rem;
+
+/** -------------------------------------------------------------------------------- */
+// Line-height
+$line-height-static: 1;
+$line-height-default: 1.2;
+
+/** -------------------------------------------------------------------------------- */
+// Letter-spacing
+$letter-spacing-bs: 0.02em;
+
+/** -------------------------------------------------------------------------------- */
+// Border-radius
+$border-radius-md: 12px;
+$border-radius-circle: 50%;
+$border-radius-round: 55px;
+
+/** -------------------------------------------------------------------------------- */
+//// Box-shadow
+$box-shadow-sm: 1px 1px 6px rgba(89, 63, 45, 0.08);
+$box-shadow-sm-hover: 2px 3px 8px rgba(89, 63, 45, 0.18);
+
+$box-shadow-bs: 2px 2px 12px rgba(89, 63, 45, 0.12);
+$box-shadow-bs-hover: 3px 5px 14px rgba(89, 63, 45, 0.25);
+
+$box-shadow-lg: 3px 3px 16px rgba(89, 63, 45, 0.18);
+$box-shadow-lg-hover: 4px 6px 20px rgba(89, 63, 45, 0.35);
+
+$box-shadow-xl: 0 4px 30px rgba(0, 0, 0, 0.15);
+$box-shadow-xl-hover: 0 6px 40px rgba(0, 0, 0, 0.25);
+
+/** -------------------------------------------------------------------------------- */
+//// Border
+$border-bs-default: 1.5px solid $Black_200;
+$border-bs-default-light: 1.5px solid rgba($color-primary, 0.7);
+$border-bs-primary: 1.5px solid $color-primary;
+
+$border-mb-default: 2px solid $color-primary;
+$border-lg-default: 3px solid $color-primary;
+
+
+/** -------------------------------------------------------------------------------- */
+// Z-indexes
+$z-index-header: 1101;
+$z-index-filter-dropdown: 1100;
+$z-index-body-mask: 1099;
+$z-index-notification: 1118;
+$z-index-cookie: 1210;
+
+$z-index-modal-mask: 1114;
+$z-index-modal-content: 1116;
+$z-index-modal-select: 1117;
+
+$z-index-drawer-mask: 1110;
+$z-index-drawer-content: 1111;
+$z-index-drawer-select: 1112;
+
+$z-index-popover-profile-layout: 1105;
+
+$carousel-arrow-size: 40px;
+
+/** -------------------------------------------------------------------------------- */
+// Blocks
+//$main-filter-height: 80px;
+//$main-filter-item-height: 50px;
+//$header-filter-item-height: 36px;
+

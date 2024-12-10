@@ -1,0 +1,59 @@
+{
+  "name": "test-task-01",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": 0,
+      "@typescript-eslint/no-unused-vars": 0
+    }
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "@ant-design/nextjs-registry": "^1.0.1",
+    "@hookform/resolvers": "^3.3.2",
+    "antd": "^5.21.0",
+    "axios": "^1.6.7",
+    "classnames": "^2.5.1",
+    "dayjs": "^1.11.13",
+    "isomorphic-dompurify": "^2.15.0",
+    "lodash": "^4.17.21",
+    "next": "^14.2.13",
+    "next-compose-plugins": "^2.2.1",
+    "next-i18next": "^14.0.3",
+    "next-images": "^1.8.5",
+    "next-redux-saga": "^4.1.2",
+    "next-redux-wrapper": "^8.1.0",
+    "react": "^18.3.1",
+    "react-datepicker": "^7.5.0",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.0",
+    "sass": "^1.82.0",
+    "yup": "^1.4.0",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^20.16.5",
+    "@types/react": "^18.3.8",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.31.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "^14.2.11",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.11",
+    "prettier": "^2.8.1",
+    "typescript": "^5.6.2"
+  }
+}

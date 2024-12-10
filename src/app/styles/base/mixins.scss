@@ -1,0 +1,99 @@
+@mixin common-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: space(2);
+  position: relative;
+  height: 100%;
+  padding: 0 8px;
+  font-size: $font-size-bs;
+  font-weight: 600;
+  color: $Secondary_500;
+  text-decoration: none;
+  border-radius: borderRadius(1);
+  cursor: pointer;
+  transition: .3s;
+  svg{
+    transition: .3s;
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    width: 80%;
+    height: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color-primary;
+    transition: $transition;
+    opacity: 0;
+  }
+  &:hover{
+    color: $Secondary_900;
+    background-color: rgba($Secondary_100, 0.05);
+    &:before{
+      height: 3px;
+      opacity: 1;
+    }
+  }
+}
+
+@mixin common-link-primary {
+  color: $color-primary;
+  transition: $transition;
+  text-decoration: underline;
+  font-weight: 600;
+  &:hover{
+    color: $color-primary-hover;
+  }
+}
+
+@mixin common-link-default {
+  transition: $transition;
+  .common-icon{
+    transition: $transition;
+  }
+  &:hover{
+    color: $color-primary-hover;
+    .common-icon{
+      fill: $color-primary;
+    }
+  }
+}
+
+@mixin global-item-inner-wrapper {
+  position: relative;
+  transition: $transition;
+  border-radius: borderRadius(3);
+  background: rgba($White, 0.8);
+  box-shadow: $box-shadow-bs;
+  &:hover{
+    background: $White;
+    box-shadow: $box-shadow-bs-hover;
+  }
+}
+
+@mixin input-upload-file-hidden{
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  border: 0 none transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  z-index: -9999 !important;
+  visibility: hidden !important;
+  position: absolute;
+}
+
+
+@function space($value){
+  @return calc(#{$space} * #{$value});
+}
+
+@function borderRadius($value){
+  @return calc(#{$space} * #{$value});
+}
+
+@function getMediaBreakpoint($breakpoint, $position: start) {
+  @return map-get(map-get($media-breakpoints, $breakpoint), $position);
+}

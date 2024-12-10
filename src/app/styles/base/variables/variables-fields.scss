@@ -1,0 +1,44 @@
+$field-p-x: space(4);
+$field-p-y: space(3);
+
+$field-bg: $White;
+$field-border: 1px solid $Black_300;
+$field-border-radius: borderRadius(2);
+
+$field-font-size: $font-size-bs;
+$field-font-size-lg: $font-size-lg;
+$field-line-height: $line-height-default;
+$field-color: $color-dark;
+
+$field-bg-disabled: $Black_200;
+$field-border-color-disabled: $Black_200;
+$field-color-disabled: $Black_500;
+
+$field-bg-active-disabled: $Black_400;
+$field-border-color-active-disabled: $Black_400;
+$field-color-active-disabled: $Black_900;
+
+$field-bg-hover: $Primary_100;
+$field-border-hover: $Primary_300;
+$field-border-focus: $Primary_300;
+
+$field-bg-active: $Primary_300;
+$field-border-active: $Primary_300;
+$field-color-active: $White;
+
+$field-border-color-error: $color-danger;
+$field-color-error: $color-danger;
+
+$field-icon-color-hover: $Black_200;
+
+$field-date-picker-active: $Primary_700;
+$field-date-picker-range: rgba($field-bg-hover, 0.5);
+$field-date-picker-radius: borderRadius(1);
+
+$field-select-bg-active: $Primary_200;
+$field-select-bg-hover: rgba($Secondary_100, 0.2);
+$field-select-bg-active-hover: $field-bg-hover;
+$field-select-bg-disabled: rgba($Black_400, 0.5);
+
+
+$filed-placeholder-color: rgba(0, 0, 0, 0.25); // ant default
