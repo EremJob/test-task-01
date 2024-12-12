@@ -105,17 +105,17 @@ const Item: FC<
     isActive,
 }) => {
     const [buttonActive, setButtonActive] = useState<boolean>();
-    const [onRowHover, setRowHover] = useState<boolean>();
+    const [rowHover, setRowHover] = useState<boolean>();
 
     const icons = useMemo(() => {
-        if (buttonActive && onRowHover) {
+        if (buttonActive && rowHover) {
             return <IconEyeOpen />;
         }
         if (buttonActive) {
             return <IconCheck />;
         }
         return <IconPlus />;
-    }, [buttonActive, onRowHover]);
+    }, [buttonActive, rowHover]);
 
     const handleHover = (value: boolean) => {
         setRowHover(value);
@@ -124,7 +124,7 @@ const Item: FC<
     return (
         <div className={cn("item_wrapper", { _active: isActive })}>
             <div
-                className={"item_inner-wrapper"}
+                className={cn("item_inner-wrapper", { _hover: rowHover })}
                 onMouseEnter={() => handleHover(true)}
                 onMouseLeave={() => handleHover(false)}
                 onClick={() => setButtonActive(true)}
@@ -149,7 +149,16 @@ const Item: FC<
                         <p>{counterparty}</p>
                     ) : (
                         <>
-                            <p className={"hovered"}>
+                            <p
+                                className={"hovered"}
+                                onMouseEnter={() => handleHover(false)}
+                                onMouseLeave={() => handleHover(true)}
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                    console.log("click on counterparty");
+                                }}
+                            >
                                 <b>{counterparty}</b>
                             </p>
                             <span>{counterpartyWallet}</span>
@@ -166,7 +175,7 @@ const Item: FC<
     );
 };
 
-/** -------------------------------------------------------------------------------- */
+/** ARRAY GENERATOR -------------------------------------------------------------------------------- */
 /** -------------------------------------------------------------------------------- */
 /** -------------------------------------------------------------------------------- */
 

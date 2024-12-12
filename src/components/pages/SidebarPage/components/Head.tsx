@@ -8,7 +8,7 @@ const Head = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 68); // Установить состояние, если прокрутка больше 50px
+            setIsScrolled(window.scrollY > 68);
         };
 
         window.addEventListener("scroll", handleScroll);
