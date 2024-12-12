@@ -1,0 +1,9 @@
+$white: #fff;
+$primaryColor: #fe6d02;
+$secondaryColor: #2196f3;
+$space: 4px;
+$box-shadow-bs: 2px 2px 12px rgba(89, 63, 45, 0.12);
+
+@function space($value){
+  @return calc(#{$space} * #{$value});
+}

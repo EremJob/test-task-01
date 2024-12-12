@@ -1,20 +1,38 @@
 import React from "react";
 import type { Metadata } from "next";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
-import { Open_Sans } from "next/font/google";
+import { Open_Sans, Roboto } from "next/font/google";
+import cn from "classnames";
 
 import "./styles/main.scss";
 import { CounterStoreProvider } from "@components/Provider";
 
 export const metadata: Metadata = {
     title: {
-        default: "Заголовок",
+        default: "Тест",
         template: "%s - Test",
     },
-    description: "Описание",
+    description: "Описание Тест",
 };
 
-const openSans = Open_Sans({ subsets: ["latin"], variable: "--font-sans" });
+const openSansFont = Open_Sans({ subsets: ["latin"], variable: "--font-sans" });
+
+const robotoFont = Roboto({
+    subsets: ["latin"],
+    weight: ["400"],
+    variable: "--roboto",
+});
+const robotoFontBold = Roboto({
+    subsets: ["latin"],
+    weight: ["700"],
+    variable: "--roboto-bold",
+});
+
+const robotoFontMed = Roboto({
+    subsets: ["latin"],
+    weight: ["500"],
+    variable: "--roboto-med",
+});
 
 export default function RootLayout({
     children,
@@ -23,7 +41,11 @@ export default function RootLayout({
 }) {
     return (
         <html lang="ru">
-            <body className={`${openSans.variable}`}>
+            <body
+                className={cn(
+                    `${openSansFont.variable} ${robotoFont.variable}  ${robotoFontBold.variable}  ${robotoFontMed.variable}`,
+                )}
+            >
                 <AntdRegistry>
                     <CounterStoreProvider>{children}</CounterStoreProvider>
                 </AntdRegistry>
