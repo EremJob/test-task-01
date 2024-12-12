@@ -1,0 +1,12 @@
+.button{
+  transition: $transition;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  &:not(:disabled){
+    cursor: pointer;
+  }
+}
+

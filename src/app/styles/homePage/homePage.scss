@@ -1,0 +1,104 @@
+@import 'variables';
+
+.home{
+  &_wrapper{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: space(6);
+    padding: 5vh 0;
+  }
+
+  &_logo{
+    &__wrapper{
+      display: flex;
+      justify-content: center;
+      margin: space(8);
+    }
+  }
+
+  &_sidebar{
+    &__inner-wrapper{
+      background: $white;
+      padding: space(4);
+      box-shadow: $box-shadow-bs;
+      border-radius: space(3);
+    }
+  }
+
+  &_list{
+    &__inner-wrapper{
+      display: flex;
+      flex-direction: column;
+      gap: space(6);
+    }
+  }
+}
+
+.ticket{
+  &_wrapper{
+    background: $white;
+    box-shadow: $box-shadow-bs;
+    border-radius: space(3);
+    display: flex;
+  }
+  &_actions{
+    width: 30%;
+    min-width: 200px;
+    flex: 0 0 auto;
+    border-right: 1px solid lightgray;
+    padding: space(6);
+    display: flex;
+    flex-direction: column;
+    gap: space(4);
+    .ant-btn{
+      font-size: 24px;
+      height: auto;
+      flex-direction: column;
+      background: $primaryColor;
+      color: $white;
+      border: 0 !important;
+      line-height: 1.1 !important;
+      padding: space(3) space(1);
+      &:hover{
+        background: rgba($primaryColor, .8) !important;
+        color: $white !important;
+      }
+    }
+  }
+  &_main-info{
+    padding: space(6);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &_place{
+    h4{
+      font-size: 36px;
+      margin-bottom: space(2);
+      font-weight: 400;
+    }
+    h5{
+      margin-bottom: space(3);
+    }
+    p{
+
+    }
+  }
+}
+
+.filed_group{
+  h4{
+    margin-bottom: space(2);
+  }
+
+  &._checkbox{
+    display: flex;
+    flex-direction: column;
+  }
+  .ant-checkbox-wrapper{
+    margin-bottom: space(2);
+  }
+  .ant-checkbox-group{
+    flex-direction: column;
+  }
+}
