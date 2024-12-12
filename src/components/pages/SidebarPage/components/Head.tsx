@@ -1,10 +1,29 @@
 import Button from "@components/pages/SidebarPage/components/Button";
+import { useEffect, useState } from "react";
 import { IconCross } from "src/components/pages/SidebarPage/Icons";
+import cn from "classnames";
 
 const Head = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 68); // Установить состояние, если прокрутка больше 50px
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
         <>
-            <div className={"sidebar_close__wrapper"}>
+            <div
+                className={cn("sidebar_close__wrapper", {
+                    _scrolled: isScrolled,
+                })}
+            >
                 <Button>
                     <IconCross />
                 </Button>

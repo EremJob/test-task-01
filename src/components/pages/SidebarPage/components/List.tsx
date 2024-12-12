@@ -1,11 +1,12 @@
 "use client";
 
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useMemo, useState } from "react";
 import cn from "classnames";
 
 import Button from "./Button";
 import { IconCheck, IconPlus } from "../Icons";
 import Filter from "@components/pages/SidebarPage/components/Filter";
+import IconEyeOpen from "@components/pages/SidebarPage/Icons/IconEyeOpen";
 
 type TDataType = {
     id: string;
@@ -104,9 +105,30 @@ const Item: FC<
     isActive,
 }) => {
     const [buttonActive, setButtonActive] = useState<boolean>();
+    const [onRowHover, setRowHover] = useState<boolean>();
+
+    const icons = useMemo(() => {
+        if (buttonActive && onRowHover) {
+            return <IconEyeOpen />;
+        }
+        if (buttonActive) {
+            return <IconCheck />;
+        }
+        return <IconPlus />;
+    }, [buttonActive, onRowHover]);
+
+    const handleHover = (value: boolean) => {
+        setRowHover(value);
+    };
+
     return (
         <div className={cn("item_wrapper", { _active: isActive })}>
-            <div className={"item_inner-wrapper"}>
+            <div
+                className={"item_inner-wrapper"}
+                onMouseEnter={() => handleHover(true)}
+                onMouseLeave={() => handleHover(false)}
+                onClick={() => setButtonActive(true)}
+            >
                 <div className={cn(COLUMN_CLASSNAME, `_${EColumns.hash}`)}>
                     <p>{hash}</p>
                     <span>{date}</span>
@@ -135,11 +157,8 @@ const Item: FC<
                     )}
                 </div>
                 <div className={cn(COLUMN_CLASSNAME, `_${EColumns.actions}`)}>
-                    <Button
-                        onClick={() => setButtonActive(true)}
-                        className={cn({ ["_active"]: buttonActive })}
-                    >
-                        {buttonActive ? <IconCheck /> : <IconPlus />}
+                    <Button className={cn({ ["_active"]: buttonActive })}>
+                        {icons}
                     </Button>
                 </div>
             </div>
